@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Data Collection Form</title>
+</head>
+<body>
+
+    <h1>Machine Learning Data Collection Form</h1>
+    <p>Please provide the following information to assist in data collection for our machine learning project. Your data will be used for analysis to create predictive models and derive insights.</p>
+
+    <!-- Begin Form -->
+    <form action="#" method="POST">
+
+        <!-- Full Name -->
+        <label for="name">Full Name:</label><br>
+        <input type="text" id="name" name="name" placeholder="Enter your full name" required><br><br>
+
+        <!-- Age -->
+        <label for="age">Age:</label><br>
+        <input type="number" id="age" name="age" placeholder="Enter your age" min="18" max="100" required><br><br>
+
+        <!-- Gender -->
+        <label for="gender">Gender:</label><br>
+        <input type="radio" id="male" name="gender" value="Male" required>
+        <label for="male">Male</label><br>
+        <input type="radio" id="female" name="gender" value="Female" required>
+        <label for="female">Female</label><br>
+        <input type="radio" id="other" name="gender" value="Other" required>
+        <label for="other">Other</label><br><br>
+
+        <!-- Location -->
+        <label for="location">Location (City, Country):</label><br>
+        <input type="text" id="location" name="location" placeholder="Enter your city and country" required><br><br>
+
+        <!-- Education Level -->
+        <label for="education">Education Level:</label><br>
+        <select id="education" name="education" required>
+            <option value="" disabled selected>Select your education level</option>
+            <option value="highschool">High School</option>
+            <option value="bachelor">Bachelor's Degree</option>
+            <option value="master">Master's Degree</option>
+            <option value="phd">PhD</option>
+        </select><br><br>
+
+        <!-- Work Experience -->
+        <label for="experience">Years of Work Experience:</label><br>
+        <input type="number" id="experience" name="experience" min="0" max="50" placeholder="Enter your work experience in years" required><br><br>
+
+        <!-- Salary -->
+        <label for="salary">Annual Salary (USD):</label><br>
+        <input type="number" id="salary" name="salary" min="10000" max="500000" step="1000" placeholder="Enter your salary" required><br><br>
+
+        <!-- Employment Status -->
+        <label for="employment">Employment Status:</label><br>
+        <input type="radio" id="employed" name="employment" value="Employed" required>
+        <label for="employed">Employed</label><br>
+        <input type="radio" id="unemployed" name="employment" value="Unemployed" required>
+        <label for="unemployed">Unemployed</label><br>
+        <input type="radio" id="self-employed" name="employment" value="Self-employed" required>
+        <label for="self-employed">Self-employed</label><br><br>
+
+        <!-- Health Data -->
+        <h2>Health Information</h2>
+        <p>This information helps us analyze how health factors might correlate with other data points for predictive modeling.</p>
+
+        <!-- Height -->
+        <label for="height">Height (in cm):</label><br>
+        <input type="number" id="height" name="height" min="100" max="250" placeholder="Enter your height in cm" required><br><br>
+
+        <!-- Weight -->
+        <label for="weight">Weight (in kg):</label><br>
+        <input type="number" id="weight" name="weight" min="30" max="200" placeholder="Enter your weight in kg" required><br><br>
+
+        <!-- Health Conditions -->
+        <label for="health">Do you have any chronic health conditions?</label><br>
+        <input type="checkbox" id="diabetes" name="health" value="Diabetes">
+        <label for="diabetes">Diabetes</label><br>
+        <input type="checkbox" id="hypertension" name="health" value="Hypertension">
+        <label for="hypertension">Hypertension</label><br>
+        <input type="checkbox" id="asthma" name="health" value="Asthma">
+        <label for="asthma">Asthma</label><br>
+        <input type="checkbox" id="none" name="health" value="None">
+        <label for="none">None</label><br><br>
+
+        <!-- Lifestyle -->
+        <h2>Lifestyle Information</h2>
+        <p>Please provide some information about your lifestyle habits.</p>
+
+        <!-- Smoking Status -->
+        <label for="smoke">Do you smoke?</label><br>
+        <input type="radio" id="yes-smoke" name="smoke" value="Yes" required>
+        <label for="yes-smoke">Yes</label><br>
+        <input type="radio" id="no-smoke" name="smoke" value="No" required>
+        <label for="no-smoke">No</label><br><br>
+
+        <!-- Physical Activity -->
+        <label for="activity">How often do you exercise per week?</label><br>
+        <input type="radio" id="none-activity" name="activity" value="None" required>
+        <label for="none-activity">None</label><br>
+        <input type="radio" id="1-3" name="activity" value="1-3 times" required>
+        <label for="1-3">1-3 times</label><br>
+        <input type="radio" id="4-5" name="activity" value="4-5 times" required>
+        <label for="4-5">4-5 times</label><br>
+        <input type="radio" id="6+" name="activity" value="6+ times" required>
+        <label for="6+">6+ times</label><br><br>
+
+        <!-- Skills -->
+        <h2>Skills and Competencies</h2>
+        <p>Please indicate your skill levels in the following areas:</p>
+
+        <!-- Python Skill -->
+        <label for="python-skill">Python Programming:</label><br>
+        <select id="python-skill" name="python-skill">
+            <option value="beginner">Beginner</option>
+            <option value="intermediate">Intermediate</option>
+            <option value="advanced">Advanced</option>
+        </select><br><br>
+
+        <!-- Machine Learning Skill -->
+        <label for="ml-skill">Machine Learning Knowledge:</label><br>
+        <select id="ml-skill" name="ml-skill">
+            <option value="beginner">Beginner</option>
+            <option value="intermediate">Intermediate</option>
+            <option value="advanced">Advanced</option>
+        </select><br><br>
+
+        <!-- Other Technical Skills -->
+        <label for="other-skills">Other Technical Skills (separated by commas):</label><br>
+        <input type="text" id="other-skills" name="other-skills" placeholder="E.g., SQL, Tableau, TensorFlow"><br><br>
+
+        <!-- Additional Comments -->
+        <label for="comments">Additional Comments or Information:</label><br>
+        <textarea id="comments" name="comments" rows="4" cols="50" placeholder="Enter any additional information here..."></textarea><br><br>
+
+        <!-- Submit Button -->
+        <input type="submit" value="Submit Data">
+
+    </form>
+    <!-- End Form -->
+
+</body>
+</html>
